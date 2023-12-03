@@ -1,0 +1,43 @@
+.game-data, .words {
+    position: absolute;
+}
+
+.msg {
+    position:relative;
+    color: red;
+    font-size: 5vh;
+}
+
+#answer {
+    width: fit-content;
+    margin: auto;
+}
+
+h1 {
+    width: fit-content;
+    margin:auto;
+    margin-bottom: 10vh;
+    font-size: 12vh;
+}
+
+table, td {
+    border: 2px solid black;
+    /* border-collapse: collapse; */
+    border-radius: 10px;
+}
+td {
+    height: 12vh;
+    width: 12vh;
+    font-size: 8vh;
+    text-align: center;
+}
+table {
+    padding: 3px;
+    margin:auto;
+    margin-top: 2vh;
+}
+
+li , ul{
+    list-style-type: none;
+    padding: 0;
+}

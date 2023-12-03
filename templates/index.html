@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="game-data">
+        <ul>
+            <li>High score: <b>{{highscore}}</b></li>
+            <li>Attempts: <b>{{attempts}}</b></li>
+            <li>Current Score: <b class="score">0</b> </li>
+            <li>Seconds left: <b class="secs">60</b></li>
+        </ul>
+    </div>
+    <h1>
+        Boggle!
+    </h1>
+    <div class="words-msg">
+        <p><b class="msg">
+           
+        </b></p>
+        <ul class="words">
+
+        </ul>
+        
+    </div>
+    <div id="answer">
+        <form method="POST">
+            <input type="text" name="guess" placeholder="Submit Answer" autocomplete="off">
+            <button>Submit</button>
+        </form>
+    </div>
+    <table>
+        <tbody>
+            {% for row in session['board'] %}
+            <tr>
+                {% for letter in row %}
+                <td>
+                    {{ letter }}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../static/app.js"></script>
+</body>
+</html>
